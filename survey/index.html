@@ -1,45 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <title id="title"><h1>survey</h1></title>
-    <content id="description"><p>form for survey</p></content>
-    <form action="" id="survey-form">
-      <label for="name" id="name-label">Name:</label>
-      <input type="text" name="name" id="name" placeholder="name" />
-      <label for="email" id="email-label">Email:</label>
-      <input type="email" name="email" id="email" placeholder="email" />
-      <label for="number" id="number-label">number</label>
-      <input
-        type="number"
-        name="number"
-        id="number"
-        placeholder="number"
-        min="0"
-        max="50"
-      />
-      <select name="dropdown" id="dropdown">
-        <option value="val1">val1</option>
-        <option value="val2">val2</option>
-      </select>
-      <input type="radio" name="gender" id="male" value="male" />
-      <label for="male">male</label>
-      <input type="radio" name="gender" id="female" value="female" />
-      <label for="female">female</label>
-      <input type="checkbox" name="val1" id="val1" value="val1" />
-      <input type="checkbox" name="val2" id="val2" value="val2" />
-      <textarea name="comms" id="comms" cols="30" rows="10">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1 id="title">title</h1>
+		<p id="description">form for survey</p>
+		<form action="" id="survey-form">
+			<label for="name" id="name-label">Name:</label>
+			<input type="text" name="name" id="name" placeholder="name" required />
+			<label for="email" id="email-label">Email:</label>
+			<input
+				type="email"
+				name="email"
+				id="email"
+				placeholder="email"
+				required
+			/>
+			<label for="number" id="number-label">number</label>
+			<input
+				type="number"
+				name="number"
+				id="number"
+				placeholder="number"
+				min="0"
+				max="50"
+			/>
+			<select name="dropdown" id="dropdown">
+				<option value="val1">val1</option>
+				<option value="val2">val2</option>
+			</select>
+			<input type="radio" name="gender" id="male" value="male" />
+			<label for="male">male</label>
+			<input type="radio" name="gender" id="female" value="female" />
+			<label for="female">female</label>
+			<input type="checkbox" name="val1" id="val1" value="val1" />
+			<input type="checkbox" name="val2" id="val2" value="val2" />
+			<textarea name="comms" id="comms" cols="30" rows="10">
 additional comments</textarea
-      >
-      <button id="submit">submit</button>
-    </form>
+			>
+			<button id="submit">submit</button>
+		</form>
 
-    <script src="script.js"></script>
-  </body>
+		<script src="script.js"></script>
+	</body>
 </html>

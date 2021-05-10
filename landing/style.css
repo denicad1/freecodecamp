@@ -12,6 +12,8 @@ header {
           flex-direction: row;
   width: 100%;
   position: fixed;
+  top: 0;
+  left: 0;
 }
 
 #nav-bar {
@@ -30,7 +32,6 @@ header {
 }
 
 .nav-link {
-  margin: 20px;
   list-style: none;
 }
 
