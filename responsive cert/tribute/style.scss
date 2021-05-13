@@ -1,65 +1,103 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
-@mixin shade($color:grey,$vert:10px,$hor:10px) {
-    box-shadow:inset 0px 0px 20px $color, $vert $hor 50px $color;
+@mixin shade($color: grey, $vert: 10px, $hor: 10px) {
+	box-shadow: inset 0px 0px 20px $color, $vert $hor 50px $color;
 }
-@mixin borderRad($rad...){
-    border-radius:$rad ;
-    -webkit-border-radius:$rad ;
-    -moz-border-radius:$rad ;
-    -ms-border-radius:$rad ;
-    -o-border-radius:$rad ;
+@mixin borderRad($rad...) {
+	border-radius: $rad;
+	-webkit-border-radius: $rad;
+	-moz-border-radius: $rad;
+	-ms-border-radius: $rad;
+	-o-border-radius: $rad;
 }
-$backColor:grey;
+@keyframes popIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0.75;
+	}
+}
+$backColor: grey;
 $secColor: white;
-#main{
-    width: 100%;
-    text-align: center;
-    background-color: $secColor;
-    
-    
+#main {
+	width: 100%;
+	text-align: center;
+	background-color: $secColor;
+	font-family: "Bebas Neue", cursive;
 }
-#img-div{
-    
-    margin: 4rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding:5rem;
-    @include borderRad(10px);
-    @include shade(white);
-    width: 95%;
-    background-color: $backColor;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    & img{
-        width: 60%;
-        
-        @include shade();
-        overflow: hidden;
-       
-        @include borderRad(10px);
-        
+#title {
+	width: 100%;
+	height: 20vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	letter-spacing: 3px;
+	color: $backColor;
+	@include borderRad(0px 0px 10px 10px);
+	@include shade();
+	font-size: 2rem;
 }
-}
-#img-caption{
-    position: relative;
-    top: 2.5rem;
-    font-size: 1rem;
-}
-#title{
-    width: 100%;
-    height: 20vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    color: $backColor;
-    @include borderRad(0px 0px 10px 10px);
-    @include shade();
+#img {
+	&-div {
+		margin: 4rem;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 5rem;
+		// @include borderRad(10px);
+		@include shade(white);
+		width: 99%;
+		background-color: $backColor;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		& img {
+			width: 60%;
+			opacity: 0.75;
+			@include shade();
+			overflow: hidden;
+			outline: grey solid 5px;
+			outline-offset: -5px;
+			animation: popIn 1s ease-out;
 
+			// @include borderRad(10%);
+		}
+	}
+	&-caption {
+		position: relative;
+		font-family: "Baloo 2", cursive;
+		top: 2.5rem;
+		letter-spacing: 1px;
+		font-size: 1rem;
+	}
+}
+#tribute {
+	&-info {
+		height: 50vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		font-size: 20px;
+
+		transition: opacity 1s, transform 1s;
+	}
+	&-title {
+		margin-bottom: 1%;
+		font-size: 3rem;
+	}
+	&-link {
+		height: 100px;
+		text-decoration: none;
+		color: black;
+		position: relative;
+		top: -20px;
+	}
+}
+.invisible {
+	opacity: 0;
+	transform: translateY(8rem);
 }
