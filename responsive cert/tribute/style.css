@@ -1,15 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 #main {
   width: 100%;
   text-align: center;
+  background-color: white;
 }
 
 #img-div {
-  display: inline-block;
-  width: 50%;
+  margin: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5rem;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-box-shadow: inset 0px 0px 20px white, 10px 10px 50px white;
+          box-shadow: inset 0px 0px 20px white, 10px 10px 50px white;
+  width: 95%;
+  background-color: grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #img-div img {
+  width: 60%;
+  -webkit-box-shadow: inset 0px 0px 20px grey, 10px 10px 50px grey;
+          box-shadow: inset 0px 0px 20px grey, 10px 10px 50px grey;
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+#img-caption {
+  position: relative;
+  top: 2.5rem;
+  font-size: 1rem;
+}
+
+#title {
   width: 100%;
-  height: auto;
+  height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: grey;
+  border-radius: 0px 0px 10px 10px;
+  -webkit-border-radius: 0px 0px 10px 10px;
+  -moz-border-radius: 0px 0px 10px 10px;
+  -ms-border-radius: 0px 0px 10px 10px;
+  -o-border-radius: 0px 0px 10px 10px;
+  -webkit-box-shadow: inset 0px 0px 20px grey, 10px 10px 50px grey;
+          box-shadow: inset 0px 0px 20px grey, 10px 10px 50px grey;
 }
 /*# sourceMappingURL=style.css.map */

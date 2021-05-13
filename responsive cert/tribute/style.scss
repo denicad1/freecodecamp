@@ -1,14 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin shade($color:grey,$vert:10px,$hor:10px) {
+    box-shadow:inset 0px 0px 20px $color, $vert $hor 50px $color;
+}
+@mixin borderRad($rad...){
+    border-radius:$rad ;
+    -webkit-border-radius:$rad ;
+    -moz-border-radius:$rad ;
+    -ms-border-radius:$rad ;
+    -o-border-radius:$rad ;
+}
+$backColor:grey;
+$secColor: white;
 #main{
     width: 100%;
     text-align: center;
+    background-color: $secColor;
+    
     
 }
 #img-div{
-    display: inline-block;
-    width: 50%;
-
+    
+    margin: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding:5rem;
+    @include borderRad(10px);
+    @include shade(white);
+    width: 95%;
+    background-color: $backColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     & img{
-        width: 100%;
-        height: auto;
-    }
+        width: 60%;
+        
+        @include shade();
+        overflow: hidden;
+       
+        @include borderRad(10px);
+        
+}
+}
+#img-caption{
+    position: relative;
+    top: 2.5rem;
+    font-size: 1rem;
+}
+#title{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: $backColor;
+    @include borderRad(0px 0px 10px 10px);
+    @include shade();
+
 }
