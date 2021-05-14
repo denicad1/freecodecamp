@@ -1,4 +1,40 @@
-form{
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+#survey-form{
     display: flex;
     flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    background-color: blue;
+    padding: 2%;
+}
+// form label,input,select{
+//     border: 1px solid red;
+//     margin: .5rem;
+// }
+// form input[type="radio"]{
+//     margin: 0;
+//     padding: 0;
+//     display: inline;
+//     float: left;
+// }
+
+// label[for="female"],label[for="male"]{
+//     float:right;
+// }
+label,select{
+    
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    margin: 0.5rem;
+    
+}
+input[type="radio"],input[type="checkbox"]{
+margin-right:10px ;
 }
