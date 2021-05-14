@@ -1,40 +1,72 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+$backColor: rgba(255, 255, 0, 0.548);
+@mixin bordRad {
+	border-radius: 10px;
 }
-#survey-form{
-    display: flex;
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-    background-color: blue;
-    padding: 2%;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
 }
-// form label,input,select{
-//     border: 1px solid red;
-//     margin: .5rem;
-// }
-// form input[type="radio"]{
-//     margin: 0;
-//     padding: 0;
-//     display: inline;
-//     float: left;
-// }
+body {
+	background-image: linear-gradient($backColor, $backColor),
+		url(imgs/background.jpg);
+	background-position: center;
+	background-size: cover;
+}
+#survey-form {
+	display: flex;
+	flex-direction: column;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+	background-color: rgba(0, 0, 255, 0.664);
+	padding: 2%;
+	@include bordRad();
+}
 
-// label[for="female"],label[for="male"]{
-//     float:right;
-// }
-label,select{
-    
-    display: flex;
-    align-items: center;
-    font-size: 1.125rem;
-    margin: 0.5rem;
-    
+label {
+	font-size: 1.25rem;
+	margin-bottom: 0.25rem;
+	margin-top: 0.25rem;
+	line-height: 2rem;
+	color: grey;
 }
-input[type="radio"],input[type="checkbox"]{
-margin-right:10px ;
+input[type="radio"],
+input[type="checkbox"] {
+	margin-right: 10px;
+}
+.form-group {
+	display: flex;
+	flex-direction: column;
+}
+input {
+	line-height: 25px;
+	@include bordRad();
+}
+
+select {
+	margin-top: 1rem;
+	padding: 0.4%;
+	font-size: 1rem;
+	@include bordRad();
+}
+.form-intro {
+	height: 20vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	letter-spacing: 3px;
+}
+.gender {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: baseline;
+	padding: 5px 0;
+	margin: 5px 0;
+}
+.gender label {
+	margin: 2%;
 }

@@ -1,5 +1,6 @@
 const sectObserver = () => {
 	const tribInfo = document.getElementById("tribute-info");
+	tribInfo.classList.add("invisible");
 	const slideUp = (entries, observer) => {
 		const [entry] = entries;
 
