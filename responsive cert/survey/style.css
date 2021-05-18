@@ -26,7 +26,12 @@ body {
   width: 40%;
   background-color: rgba(0, 0, 255, 0.664);
   padding: 2%;
-  border-radius: 10px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-style: hidden;
 }
 
 label {
@@ -34,7 +39,7 @@ label {
   margin-bottom: 0.25rem;
   margin-top: 0.25rem;
   line-height: 2rem;
-  color: grey;
+  color: white;
 }
 
 input[type="radio"],
@@ -54,14 +59,24 @@ input[type="checkbox"] {
 
 input {
   line-height: 25px;
-  border-radius: 10px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-style: hidden;
 }
 
 select {
-  margin-top: 1rem;
+  margin-bottom: 2em;
   padding: 0.4%;
   font-size: 1rem;
-  border-radius: 10px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-style: hidden;
 }
 
 .form-intro {
@@ -86,10 +101,10 @@ select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -101,6 +116,6 @@ select {
 }
 
 .gender label {
-  margin: 2%;
+  margin: 1%;
 }
 /*# sourceMappingURL=style.css.map */

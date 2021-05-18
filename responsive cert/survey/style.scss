@@ -1,6 +1,11 @@
 $backColor: rgba(255, 255, 0, 0.548);
 @mixin bordRad {
-	border-radius: 10px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-style: hidden;
 }
 * {
 	margin: 0;
@@ -30,7 +35,7 @@ label {
 	margin-bottom: 0.25rem;
 	margin-top: 0.25rem;
 	line-height: 2rem;
-	color: grey;
+	color: white;
 }
 input[type="radio"],
 input[type="checkbox"] {
@@ -46,7 +51,7 @@ input {
 }
 
 select {
-	margin-top: 1rem;
+	margin-bottom: 2em;
 	padding: 0.4%;
 	font-size: 1rem;
 	@include bordRad();
@@ -61,12 +66,12 @@ select {
 }
 .gender {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: flex-start;
 	align-items: baseline;
 	padding: 5px 0;
 	margin: 5px 0;
 }
 .gender label {
-	margin: 2%;
+	margin: 1%;
 }
