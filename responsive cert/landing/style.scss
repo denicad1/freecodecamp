@@ -1,3 +1,6 @@
+@mixin bordRad(){
+	border-radius: 4px;
+}
 *{
 	margin: 0;
 	padding: 0;
@@ -6,15 +9,22 @@
 
 .section {
 	height: 100vh;
-	margin-top: 50px;
+	margin-top: 100px;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	& h1{
+		text-transform: uppercase;
+		margin-bottom: 1em;
+	}
 }
 header {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	// position: sticky;
+	position: sticky;
 	top:0;
-	background: rgb(255, 255, 255);
+	// background: rgb(255, 255, 255);
 	z-index: 5;
 	
 }
@@ -54,7 +64,6 @@ header {
 	color: #125b8f;
 	background-color: #6f78a1;
 	//border: 1px solid #1D9AF2;
-	border-radius: 4px;
 	border: none;
 	padding: 15px;
 	cursor: pointer;
@@ -62,10 +71,7 @@ header {
 	font-size: 1em;
 	//background-position: center;
 	box-shadow: 0 2px 0 #999b9a;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	-ms-border-radius: 4px;
-	-o-border-radius: 4px;
+	@include bordRad();
 }
 .button:active {
 	box-shadow: 0 1px 1px #1c221f;
@@ -91,6 +97,9 @@ header {
 			// font-weight: bold;
 			font-size: 1rem;
 			letter-spacing: 2px;
+			padding: 5px;
+			@include bordRad();
+
 		}
 	// display: flex;
 	// flex-direction:column ;

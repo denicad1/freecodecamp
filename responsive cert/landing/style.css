@@ -7,7 +7,15 @@
 
 .section {
   height: 100vh;
-  margin-top: 50px;
+  margin-top: 100px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section h1 {
+  text-transform: uppercase;
+  margin-bottom: 1em;
 }
 
 header {
@@ -19,8 +27,9 @@ header {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
-  background: white;
   z-index: 5;
 }
 
@@ -75,7 +84,6 @@ header {
 .button {
   color: #125b8f;
   background-color: #6f78a1;
-  border-radius: 4px;
   border: none;
   padding: 15px;
   cursor: pointer;
@@ -83,10 +91,7 @@ header {
   font-size: 1em;
   -webkit-box-shadow: 0 2px 0 #999b9a;
           box-shadow: 0 2px 0 #999b9a;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
+  border-radius: 4px;
 }
 
 .button:active {
@@ -121,6 +126,8 @@ header {
   color: #125b8f;
   font-size: 1rem;
   letter-spacing: 2px;
+  padding: 5px;
+  border-radius: 4px;
 }
 
 ::-webkit-input-placeholder {
