@@ -7,7 +7,8 @@ const scrolling = () => {
     const correctSect =
       document.getElementById(`${sect}`).getBoundingClientRect().top +
       window.pageYOffset -
-      (navHeight + 20);
+      (navHeight + 100);
+
     window.scrollTo({ top: correctSect, behavior: "smooth" });
     // document.querySelector(`#${sect}`).scrollIntoView({
     //   behavior: "smooth",
@@ -43,7 +44,7 @@ const titleRaise = () => {
     const [entry] = entries;
     if (!entry.isIntersecting) return;
 
-    entry.target.classList.add("animate__animated", "animate__bounceInUp");
+    entry.target.classList.add("animate__animated", "animate__bounce");
     observer.unobserve(entry.target);
   };
   const sectObserver = new IntersectionObserver(slideUp, opts);
