@@ -1,13 +1,20 @@
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 .section {
   height: 100vh;
-  margin-top: 100px;
+  margin-top: 6.5rem;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -65,8 +72,8 @@ header {
 }
 
 #header-img {
-  height: 100px;
-  width: 100px;
+  height: 6.5rem;
+  width: 6.5rem;
 }
 
 @media only screen and (max-width: 600px) {
@@ -91,7 +98,7 @@ header {
   color: #125b8f;
   background-color: #6f78a1;
   border: none;
-  padding: 15px;
+  padding: 1rem;
   cursor: pointer;
   height: 3rem;
   font-size: 1em;
@@ -122,7 +129,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .email-group input[type='email'] {
@@ -169,5 +176,47 @@ form {
 
 .spacing {
   margin: 7px;
+}
+
+.describe-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fas {
+  font-size: 3rem;
+  color: #125b8f;
+  width: 6rem;
+  text-align: center;
+}
+
+.desc-sect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 35rem;
+  height: 5rem;
+}
+
+.desc-exp {
+  right: 0;
 }
 /*# sourceMappingURL=style.css.map */
